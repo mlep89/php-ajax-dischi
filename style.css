@@ -20,7 +20,7 @@
     background-color: #1d2d3c;
 }
 
-.container {
+.my_container {
     width: 80%;
     height: 100%;
     margin: 0 auto;
@@ -29,11 +29,10 @@
 }
 
 .center {
-    justify-content: center;
+    padding: 20px;
 }
 
 .poster {
-    width: 33.33%;
     background-color: #000000;
     color: white;
     padding: 10px 20px;
@@ -41,10 +40,7 @@
     text-align: center;
 }
 
-.poster li {
-    list-style: none;
-}
-
 .poster img {
-    width: 100px;
+    width: 100%;
+    padding: 10px;
 }
