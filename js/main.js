@@ -1,20 +1,16 @@
 var root = new Vue({
     el: '#root',
     data: {
-    songs= [], //ho creato l'array "songs" che va a sostituire il vecchio array "films"
-    image: "https://" 
+        songs: '' 
     },
-    mounted: {
-        displaySongs: function(){
+    mounted() { 
             axios
-            //cambia chiamata GET a nuovo database
-            .get('https://api.themoviedb.org/3/search/movie?api_key=e1e83484b58b02a9d475b9cb41829bfe&language=it-IT&page=1&include_adult=false&query=')
+            .get('http://localhost:8888/php-ajax-dischi/server.php')
             .then(( response) => {
-                this.songs = response.data.results;
+                const result = response.data;
+                console.log(result);   
             })
-        }
-    },
-    
+    }
     /*methods: {
         searchFilm: function(userSearch){
             if (userSearch != '') {

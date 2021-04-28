@@ -13,7 +13,7 @@
     <title>PHP Dischi Vue Version</title>
 </head>
 <body>
-    <div id="root">
+    <div>
         <div class="header">
             <div class="my_container">
                 <div class="logo">
@@ -23,19 +23,17 @@
         </div>
         <div class="main">
             <div class="container center">
-                    <div class="row">
-                    <!--<div v-for="song in songs" :style="{ backgroundImage: 'url(' + image +'w342' + film.poster_path +')' }"> DA RINOMINARE END-POINTS CHIAMATA -->
-                    <p>{{song.title}}</p>
-                    <p>{{song.author}}</p>
-                    <p>{{song.year}}</p>
+                <div class="row" id="root">
+                    <div v-for="song in songs">  <!-- :style="{ backgroundImage: 'url(' + image +'w342' + film.poster_path +')' }"> DA RINOMINARE END-POINTS CHIAMATA -->
+                        <p>{{song.title}}</p>
+                        <p>{{song.author}}</p>
+                        <p>{{song.year}}</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     
-    
-
     <script src="js/main.js"></script>
 </body>
 </html>
