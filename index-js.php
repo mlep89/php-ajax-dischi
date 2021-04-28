@@ -24,8 +24,9 @@
         <div class="main">
             <div class="container center">
                 <div class="row" id="root">
-                    <div v-for="song in songs">  <!-- :style="{ backgroundImage: 'url(' + image +'w342' + film.poster_path +')' }"> DA RINOMINARE END-POINTS CHIAMATA -->
-                        <p>{{song.title}}</p>
+                    <div v-for="song in songs" class="poster col-sm-3"> 
+                    <img :src="song.poster" alt="">    
+                    <p>{{song.title}}</p>
                         <p>{{song.author}}</p>
                         <p>{{song.year}}</p>
                     </div>
