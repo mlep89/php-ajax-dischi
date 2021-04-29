@@ -10,20 +10,24 @@
     <!--Collegamenti foglio di stile e Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="#">
     <title>PHP Dischi Vue Version</title>
 </head>
 <body>
-    <div>
+    <div id="root">
         <div class="header">
             <div class="my_container">
                 <div class="logo">
                     <img src="img/spotify_logo.png" alt="Spotify Logo">
                 </div>
+                <div>
+                <input v-model="userSearch" type="text" placeholder="Cerca per artista" v-on:keyup.enter="searchSinger(userSearch)">
+                </div>
             </div>
         </div>
         <div class="main">
             <div class="container center">
-                <div class="row" id="root">
+                <div class="row">
                     <div v-for="song in songs" class="poster col-sm-3"> 
                     <img :src="song.poster" alt="">    
                     <p>{{song.title}}</p>
